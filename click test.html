@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Speed Test</h1>
+    <p>Click the button to start the speed test.</p>
+    <button id="startTest">Start Test</button>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('startTest').addEventListener('click', function() {
+            const start = performance.now(); // Start timing
+
+            // Perform a task for testing (e.g., generating a large array)
+            const arr = [];
+            for (let i = 0; i < 1000000; i++) {
+                arr.push(Math.random());
+            }
+
+            const end = performance.now(); // End timing
+            const duration = end - start; // Calculate duration
+
+            document.getElementById('result').innerText = `Task completed in ${duration.toFixed(2)} milliseconds.`;
+        });
+    </script>
+</body>
+</html>
