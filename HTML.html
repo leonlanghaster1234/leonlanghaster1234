@@ -1,0 +1,148 @@
+# Update the HTML content with the generated image as the background and welcome screen
+updated_html_with_image = """
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamer games for free!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            overflow-x: hidden;
+            background-image: url('A_futuristic_gaming_theme_with_a_glowing_neon_blue.png'); /* Setze das generierte Bild als Hintergrund */
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            margin-top: 50px;
+            color: #fff;
+            text-shadow: 0px 0px 10px #000;
+        }
+
+        /* Willkommensbildschirm */
+        #welcome-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Halbtransparenter schwarzer Hintergrund */
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            z-index: 9999;
+            animation: fadeOut 3s ease-in-out 3s forwards; /* Fade out nach 3 Sekunden */
+            background-image: url('A_futuristic_gaming_theme_with_a_glowing_neon_blue.png'); /* Generiertes Bild auf dem Willkommensbildschirm */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Willkommens-Text Animation */
+        @keyframes pulse {
+            0% { text-shadow: 0 0 10px #87CEEB, 0 0 20px #87CEEB; }
+            100% { text-shadow: 0 0 20px #00BFFF, 0 0 30px #00BFFF; }
+        }
+
+        /* Fade-out Effekt für Willkommensbildschirm */
+        @keyframes fadeOut {
+            100% { opacity: 0; visibility: hidden; }
+        }
+
+        #welcome-screen span {
+            font-family: Arial, sans-serif;
+            font-size: 48px;
+            animation: pulse 2s infinite alternate;
+        }
+
+        /* Hauptinhalt (nach dem Willkommensbildschirm) */
+        .scroll-container {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            margin-top: 30px;
+            padding-bottom: 20px;
+        }
+
+        .button {
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: #ADD8E6; /* Hellblau */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            flex: 0 0 auto; /* Begrenzt die Breite der Schaltflächen */
+        }
+
+        /* Schaltflächen Hover-Effekt */
+        .button:hover {
+            background-color: #87CEFA; /* Helleres Blau beim Hover */
+            transform: scale(1.1); /* Vergrößert die Schaltfläche leicht */
+        }
+
+        .background-text {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            color: rgba(255, 255, 255, 0.1);
+            z-index: -1;
+            text-shadow: 0 0 20px #000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Willkommensbildschirm -->
+    <div id="welcome-screen">
+        <span>Willkommen zu Gamer Games!</span>
+    </div>
+
+    <h1>Gamer games for free!</h1>
+
+    <div class="scroll-container">
+        <!-- 20 quadratische hellblaue Buttons mit horizontalem Scrollen -->
+        <button class="button">Gamer 1</button>
+        <button class="button">Gamer 2</button>
+        <button class="button">Gamer 3</button>
+        <button class="button">Gamer 4</button>
+        <button class="button">Gamer 5</button>
+        <button class="button">Gamer 6</button>
+        <button class="button">Gamer 7</button>
+        <button class="button">Gamer 8</button>
+        <button class="button">Gamer 9</button>
+        <button class="button">Gamer 10</button>
+        <button class="button">Gamer 11</button>
+        <button class="button">Gamer 12</button>
+        <button class="button">Gamer 13</button>
+        <button class="button">Gamer 14</button>
+        <button class="button">Gamer 15</button>
+        <button class="button">Gamer 16</button>
+        <button class="button">Gamer 17</button>
+        <button class="button">Gamer 18</button>
+        <button class="button">Gamer 19</button>
+        <button class="button">Gamer 20</button>
+    </div>
+
+    <div class="background-text">Gamer are good</div>
+
+</body>
+</html>
+"""
+
+# Save this updated HTML content with the image included as background and in the welcome screen
+final_file_path = "/mnt/data/gamer_project_with_image_and_animations.html"
+with open(final_file_path, "w") as file:
+    file.write(updated_html_with_image)
+
+final_file_path
