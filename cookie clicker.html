@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            display: flex;
+            height: 100vh;
+        }
+        #main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #d0d0d0;
+            background-image: url('https://www.example.com/wall-texture.jpg'); /* Ersetze durch deine Wandtextur-URL */
+            background-size: cover;
+        }
+        #button {
+            width: 100px;
+            height: 100px;
+            background: url('https://www.example.com/chatgpt-cookie.jpg') no-repeat center center; /* Ersetze durch deine ChatGPT-Cookie-Textur-URL */
+            background-size: cover;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        #counter {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        #sidebar {
+            width: 200px;
+            background: #e0e0e0;
+            padding: 10px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        }
+        #sidebar h2 {
+            font-size: 18px;
+        }
+        .upgrade {
+            margin: 10px 0;
+        }
+        #title {
+            text-align: center;
+            margin: 20px;
+            font-size: 36px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="title">Cookie Clicker</div>
+    <div id="container">
+        <div id="main">
+            <button id="button" onclick="incrementCounter()"></button>
+            <div id="counter">0 Klicks</div>
+        </div>
+        <div id="sidebar">
+            <h2>Upgrades</h2>
+            <div class="upgrade">AI Clicker 1 - 10 Punkte</div>
+            <div class="upgrade">AI Clicker 2 - 50 Punkte</div>
+            <div class="upgrade">AI Clicker 3 - 100 Punkte</div>
+        </div>
+    </div>
+    <script>
+        let counter = 0;
+        function incrementCounter() {
+            counter++;
+            document.getElementById('counter').innerText = `${counter} Klicks`;
+        }
+        // Dummy code for future feature
+        setTimeout(() => {
+            alert('In einer Stunde erscheint ein neues Feature!');
+        }, 3600000); // 1 Stunde in Millisekunden
+    </script>
+</body>
+</html>
