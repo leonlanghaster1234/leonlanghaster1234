@@ -1,0 +1,39 @@
+/* Globale Stile */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    overflow-x: hidden;
+    background-image: url('A_futuristic_gaming_theme_with_a_glowing_neon_blue.png');
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    margin-top: 50px;
+    color: #fff;
+    text-shadow: 0px 0px 10px #000;
+}
+
+/* Speicherstatus-Anzeige */
+#datetime-bar {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+
+#save-button {
+    padding: 5px 10px;
+    background-color: #87CEFA;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#save-status {
+    margin-left: 10px;
+    color: #FFD700; /* Gold für den Speicherstatus */
+}
